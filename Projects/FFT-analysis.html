@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guitar FFT Analyzer | Danilo Pierpaoli</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f7f9fc;
+      color: #1e2a38;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #e3f2fd;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #0d47a1;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .screenshot {
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 100%;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: #0d47a1;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎸 Guitar FFT Analyzer</h1>
+    <p>Extract notes and chords from raw audio using frequency analysis</p>
+  </header>
+
+  <main>
+    <h2>Overview</h2>
+    <p>
+      This project analyzes guitar audio signals to extract fundamental frequencies and map them to musical notes and chords. 
+      It uses Fast Fourier Transforms (FFT) to convert time-domain waveforms into the frequency domain.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Reads `.wav` files and performs FFT</li>
+      <li>Identifies dominant frequency peaks</li>
+      <li>Maps peaks to musical notes using 12-TET tuning</li>
+      <li>Infers simple chords from note combinations</li>
+      <li>Visualizes waveform and frequency spectrum</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Python</li>
+      <li>NumPy, Matplotlib, SciPy</li>
+      <li>Librosa (optional for audio processing)</li>
+    </ul>
+
+    <h2>GitHub Repository</h2>
+    <p>
+      <a href="https://github.com/yourgithub/guitar_fft_analysis" target="_blank">
+        github.com/yourgithub/guitar_fft_analysis
+      </a>
+    </p>
+
+    <!-- Optional Screenshot -->
+    <!-- <img src="../assets/fft-screenshot.png" alt="FFT Spectrum Screenshot" class="screenshot"> -->
+
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+  </main>
+
+</body>
+</html>
