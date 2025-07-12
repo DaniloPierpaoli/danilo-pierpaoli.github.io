@@ -6,52 +6,52 @@
   <title>Guitar FFT Analyzer | Danilo Pierpaoli</title>
   <style>
     body {
-  background: url('../assets/guitar-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  color: #f4f4f4;
-  line-height: 1.6;
-  }
-    
+      background: url('../assets/guitar-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
 
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4); /* full-page dim overlay */
+      z-index: -1;
+    }
 
     header {
-      background-color: #e3f2fd;
-      padding: 40px 20px;
       text-align: center;
+      padding: 60px 20px 30px;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      color: #0d47a1;
+      color: #ffffff;
     }
 
     header p {
       font-size: 1.1rem;
       margin-top: 10px;
-      color: #555;
+      color: #cccccc;
     }
 
-main {
-  background-color: rgba(0, 0, 0, 0.7);  /* Dark transparent background */
-  padding: 40px 30px;
-  border-radius: 10px;
-  margin: 60px auto;
-  max-width: 800px;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
+    main {
+      background-color: rgba(0, 0, 0, 0.7); /* dark transparent box */
+      padding: 40px 30px;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+    }
 
-}
-  h1, h2, h3 {
-  color: #ffffff;
-}
-
-
-    h2 {
-      color: #0d47a1;
+    h2, h3 {
+      color: #ffffff;
       margin-top: 40px;
     }
 
@@ -60,7 +60,7 @@ main {
     }
 
     a {
-      color: #1976d2;
+      color: #64b5f6;
       text-decoration: none;
     }
 
@@ -71,14 +71,15 @@ main {
     .screenshot {
       margin: 20px 0;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       max-width: 100%;
+      display: block;
     }
 
     .back-link {
       display: inline-block;
       margin-top: 50px;
-      color: #0d47a1;
+      color: #90caf9;
       font-weight: bold;
     }
   </style>
@@ -93,7 +94,7 @@ main {
   <main>
     <h2>Overview</h2>
     <p>
-      This project analyzes guitar audio signals to extract fundamental frequencies and map them to musical notes and chords. 
+      This project analyzes guitar audio signals to extract fundamental frequencies and map them to musical notes and chords.
       It uses Fast Fourier Transforms (FFT) to convert time-domain waveforms into the frequency domain.
     </p>
 
@@ -102,9 +103,12 @@ main {
       <li>Reads `.wav` files and performs FFT</li>
       <li>Identifies dominant frequency peaks</li>
       <li>Maps peaks to musical notes using 12-TET tuning</li>
-      <li>Infers simple chords from note combinations</li>
+      <li>Infers basic chords from note combinations</li>
       <li>Visualizes waveform and frequency spectrum</li>
     </ul>
+
+    <h2>FFT Spectrum Example</h2>
+    <img src="../assets/fft-spectrum.png" alt="FFT Spectrum Plot" class="screenshot" />
 
     <h2>Technologies Used</h2>
     <ul>
@@ -112,8 +116,6 @@ main {
       <li>NumPy, Matplotlib, SciPy</li>
       <li>Librosa (optional for audio processing)</li>
     </ul>
-    <h2>FFT Spectrum Example</h2>
-    <img src="../assets/fft-spectrum.png" alt="FFT Spectrum Plot" class="screenshot">
 
     <h2>GitHub Repository</h2>
     <p>
@@ -122,11 +124,23 @@ main {
       </a>
     </p>
 
-    <!-- Optional Screenshot -->
-    <!-- <img src="../assets/fft-screenshot.png" alt="FFT Spectrum Screenshot" class="screenshot"> -->
+    <h2>Interactive Demo</h2>
+    <p>
+      Try the live app:  
+      <a href="https://your-streamlit-app.streamlit.app" target="_blank">Launch FFT Analyzer</a>
+    </p>
+
+    <h2>What I Learned</h2>
+    <ul>
+      <li>How FFT works and its role in audio signal processing</li>
+      <li>Translating frequencies to musical notes in code</li>
+      <li>Dealing with noisy signals and real-world audio input</li>
+      <li>How to visualize and communicate frequency-domain data</li>
+    </ul>
 
     <a href="../index.html" class="back-link">← Back to Portfolio</a>
   </main>
 
 </body>
 </html>
+
