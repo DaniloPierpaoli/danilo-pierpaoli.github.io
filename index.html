@@ -75,6 +75,20 @@
       font-size: 0.9rem;
       color: #444;
     }
+    .project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #0d47a1;
+}
   </style>
 </head>
 <body>
@@ -102,9 +116,11 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Guitar FFT Analyzer</h3>
-        <p>Python tool that extracts musical notes and chords from raw audio using Fast Fourier Transforms.</p>
-      </div>
+         <h3>FFT Analysis</h3>
+         <p>Python tool that extracts musical notes and chords from raw audio using Fast Fourier Transforms.</p>
+          <a href="projects/fft-analyzer.html" target="_blank">View Project</a>
+           </div>
+      
       <div class="project-card">
         <h3>Quantum Circuit Designer</h3>
         <p>IBM Qiskit project focused on quantum correlations, Bell inequalities, and basic quantum logic.</p>
