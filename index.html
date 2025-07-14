@@ -8,28 +8,32 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f7f9fc;
-      color: #1e2a38;
+      color: #ffffff;
+      background: url('assets/IMG_4599.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Add dark overlay behind content */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
     }
 
     header {
-      background-color: #e3f2fd;
       padding: 60px 20px;
       text-align: center;
     }
-    <section style="background-image: url('assets/IMG_4599.jpeg'); background-size: cover; background-position: center; color: #ffffff; padding: 80px 20px;">
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 60px 30px; border-radius: 12px; max-width: 800px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Hubble Ultra Deep Field</h2>
-    <p style="font-size: 1.2rem; line-height: 1.6;">
-      A glimpse into the farthest corners of the visible universe.<br>
-      Every point of light you see is an entire galaxy.
-    </p>
-  </div>
-</section>
+
     header h1 {
       font-size: 3rem;
       margin: 0;
-      color: #0d47a1;
+      color: #90caf9;
     }
 
     header p {
@@ -59,7 +63,7 @@
     }
 
     h2 {
-      color: #0d47a1;
+      color: #90caf9;
       margin-bottom: 20px;
     }
 
@@ -70,49 +74,71 @@
     }
 
     .project-card {
-      background: white;
+      background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    .project-card h3 {
+      color: #ffffff;
+    }
+
+    .project-card p {
+      color: #dddddd;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #1976d2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #0d47a1;
+    }
+
+    .button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 10px 18px;
+      margin: 5px 5px 0 0;
+      display: inline-block;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #0c5ecb;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
-      background: #e3f2fd;
       font-size: 0.9rem;
-      color: #444;
+      color: #cccccc;
     }
-    .project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #1976d2;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.project-card a:hover {
-  background-color: #0d47a1;
-  .button {
-  background-color: #1e90ff;
-  color: white;
-  padding: 10px 18px;
-  margin: 5px 5px 0 0;
-  display: inline-block;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-.button:hover {
-  background-color: #0c5ecb;
-}
-
-}
+    footer a {
+      color: #cccccc;
+    }
   </style>
 </head>
 <body>
@@ -125,15 +151,7 @@
       <a href="#contact">Contact</a>
     </div>
   </header>
-  <section style="background-image: url('assets/IMG_4599.jpeg'); background-size: cover; background-position: center; color: #ffffff; padding: 80px 20px;">
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 60px 30px; border-radius: 12px; max-width: 800px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Hubble Ultra Deep Field</h2>
-    <p style="font-size: 1.2rem; line-height: 1.6;">
-      A glimpse into the farthest corners of the visible universe.<br>
-      Every point of light you see is an entire galaxy.
-    </p>
-  </div>
-</section>
+
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -148,18 +166,12 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-         <h3>FFT Analysis</h3>
-         <p>Python tool that extracts musical notes and chords from raw audio using Fast Fourier Transforms.</p>
-          <a href="Projects/FFT-analysis.html" target="_blank">View Project</a>
-        <p>Sound FFT Analyzer :An interactive app that extracts and visualizes musical frequencies and notes from guitar recordings using Fast Fourier Transform (FFT) and custom signal processing.</p>
-            <a href="https://fft-analyzer-app-gqnbgv3c5dns4qswe8phvc.streamlit.app/" target="_blank" class="button">Launch Live App</a>
-           </div>
-        <div class="project-card">
-
-
- 
-</div>
-
+        <h3>FFT Analysis</h3>
+        <p>Python tool that extracts musical notes and chords from raw audio using Fast Fourier Transforms.</p>
+        <a href="Projects/FFT-analysis.html" target="_blank">View Project</a>
+        <p>Sound FFT Analyzer: An interactive app that extracts and visualizes musical frequencies and notes from guitar recordings using Fast Fourier Transform (FFT) and custom signal processing.</p>
+        <a href="https://fft-analyzer-app-gqnbgv3c5dns4qswe8phvc.streamlit.app/" target="_blank" class="button">Launch Live App</a>
+      </div>
       <div class="project-card">
         <h3>Quantum Circuit Designer</h3>
         <p>IBM Qiskit project focused on quantum correlations, Bell inequalities, and basic quantum logic.</p>
@@ -190,7 +202,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Danilo Pierpaoli. All rights reserved. | Image credit: <a href="https://www.nasa.gov/" target="_blank" style="color: #444;">NASA / ESA</a>
+    &copy; 2025 Danilo Pierpaoli. All rights reserved. | Image credit: <a href="https://www.nasa.gov/" target="_blank">NASA / ESA</a>
   </footer>
 
 </body>
