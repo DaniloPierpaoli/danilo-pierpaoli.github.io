@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stochastic Resonance</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #1e2a38;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background-color: #1976d2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #0c5ecb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Stochastic Resonance</h1>
+    <p>How noise can enhance signal detection in nonlinear systems</p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      This project explores the phenomenon of stochastic resonance, where the addition of noise improves the detection of weak periodic signals in bistable systems.
+      Simulations were performed using Python, with comparisons in both time and frequency domains using FFT.
+    </p>
+
+    <h2>Visual Demonstration</h2>
+    <p>Signal vs. noise evolution in time domain:</p>
+    <img src="../assets/stochastic_signal_noise.png" alt="Time-domain plot of stochastic resonance">
+    <p>FFT comparison with and without optimal noise level:</p>
+    <img src="../assets/fft_stochastic.png" alt="FFT of signal with stochastic resonance">
+
+    <a class="button" href="../notebooks/stochastic-resonance.ipynb" download>Download Notebook</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Danilo Pierpaoli. All rights reserved.
+  </footer>
+
+</body>
+</html>
