@@ -1,31 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Developer Tech Stack Explorer</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #e0e0e0;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      color: #42a5f5;
+    }
+
+    section {
+      background: #1e1e2f;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      border-bottom: 2px solid #42a5f5;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dashboard-gallery {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .dashboard-gallery img {
+      width: 300px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      border: 1px solid #333;
+    }
+
+    .dashboard-gallery img:hover {
+      transform: scale(1.05);
+      border-color: #42a5f5;
+    }
+
+    a {
+      color: #42a5f5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Developer Tech Stack Explorer</h1>
+    <h1>🧠 Developer Tech Stack Explorer</h1>
     <p>Interactive insights from the Stack Overflow 2024 Developer Survey</p>
   </header>
 
   <section>
-    <h2>Project Overview</h2>
- <p>This project analyzes developer preferences across countries and age groups based on the latest Stack Overflow survey. It features a clean data pipeline, insightful visualizations, and an interactive dashboard built using <strong>Python</strong>, <strong>Streamlit</strong>, and <strong>Plotly</strong>.</p>
+    <h2>📊 Project Overview</h2>
+    <p>This project analyzes developer preferences across countries and age groups using the Stack Overflow 2024 survey. It features a clean data pipeline, insightful visualizations, and an interactive dashboard built using Streamlit and Plotly.</p>
   </section>
 
-  <div class="dashboard-gallery">
-      <img src="..assets/languages-bar.png" alt="Top 10 Programming Languages">
-      <img src="..assets/databases-pie.png" alt="Database Preferences Pie Chart">
-      <img src="..assets/platforms-bar.png" alt="Cloud Platform Usage">
+  <section>
+    <h2>📸 Dashboard Preview</h2>
+    <div class="dashboard-gallery">
+      <img src="../assets/languages-bar.png" alt="Top 10 Programming Languages" />
+      <img src="../assets/databases-pie.png" alt="Database Preferences Pie Chart" />
+      <img src="../assets/platforms-bar.png" alt="Cloud Platform Usage" />
     </div>
-  
+  </section>
 
   <section>
-    <h2>Key Features</h2>
+    <h2>🧩 Key Features</h2>
     <ul>
       <li>Data cleaning and wrangling with <code>pandas</code></li>
       <li>Custom parsing of multi-response survey columns</li>
@@ -35,19 +109,18 @@
   </section>
 
   <section>
-    <h2>Dashboard Preview</h2>
+    <h2>🚀 Dashboard Preview</h2>
     <p>Use the dashboard to select country and age range filters, then view top 10 preferences for each technology stack:</p>
-    
-    <p><a href="https://developer-job-market-analysis-gsobxkwepp7dsfdus2dznn.streamlit.app" target="_blank">🌐 Try the Live Dashboard</a></p>
+    <p>🌐 <a href="https://developer-job-market-analysis-gsobxwkwepp7dsdus2dznn.streamlit.app" target="_blank">Try the Live Dashboard</a></p>
   </section>
 
   <section>
-    <h2>Repository</h2>
-    <p>Access the full source code and notebook analysis on <a href="https://github.com/DaniloPierpaoli/Developer-job-market-analysis" target="_blank">GitHub</a>.</p>
+    <h2>📁 Repository</h2>
+    <p>Access the full source code and notebook analysis on <a href="https://github.com/DaniloPierpaoli/Developer_Job_Market-Analysis" target="_blank">GitHub</a>.</p>
   </section>
 
   <footer>
-    <p>Created by Danilo Pierpaoli | <a href="mailto:danilo.pierpaoli@outlook.com">Contact</a></p>
+    Created by Danilo Pierpaoli | <a href="../index.html">Back to Portfolio</a>
   </footer>
 </body>
 </html>
